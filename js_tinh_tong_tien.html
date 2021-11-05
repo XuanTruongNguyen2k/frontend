@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type=submit] {
+        background-color: #04AA6D;
+        color: white;
+        }
+        
+        .form{
+            width: 250px;
+            height: 350px;
+            background-color: #f1f1f1;
+            padding: 20px;
+        }
+        .input{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        #error{
+            white-space: nowrap;
+            color: red;
+            display: none;
+            margin-top: 10px;
+        }
+        input{
+            position: relative;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <h1>Đăng ký form</h1>
+    <form action="#" name="MyForm" onsubmit="return(validate());">
+        <div class="input">
+            <label for="masp" >Mã sản phẩm:</label>
+            <input type="text" name="masp" id="" required>
+        </div>
+        <div class="input">
+            <label for="tensp">Tên sản phẩm:</label>
+           <input type="text" id="tensp" name="tensp" required>
+        </div>
+        <div class="input">
+            <label for="hinhthuc">Hình thức bán:</label>
+            <input type="text" name="hinhthuc" id="" required>
+        </div>
+        <div class="input">
+            <label for="solg">Số lượng:</label>
+            <input type="text" name="solg" id="solg" required>
+        </div>
+        <div class="input">
+            <label for="dongia">Đơn giá</label>
+            <input type="text" name="dongia" id="dongia" required>
+        </div>
+
+        <div class="input">
+            <label  for="">Tổng tiền:</label>
+            <input type="text" name="tongtien" id="tongtien" style="pointer-events:none;">
+        </div>
+        <div class="subit">
+            <input type="submit" value="Gửi đi" id="submit"></input>
+           <button>Hủy bỏ</button>
+        </div>
+        <label id="error" for="error"></label>
+    </form>
+</div>
+<script>
+    function validate(){
+        var solg=document.getElementById("solg").value;
+        var dongia=document.getElementById("dongia").value;
+        var error=document.getElementById("error");
+        if(isNaN(document.MyForm.solg.value)){
+            document.getElementById("error").innerHTML="Y/c nhap chu so";
+            document.MyForm.solg.focus();
+            error.style.display = "block";
+            return false;
+        }
+        if(isNaN(document.MyForm.dongia.value)){
+            document.getElementById("error").innerHTML="Y/c nhap chu so đơn giá";
+            document.MyForm.dongia.focus();
+            error.style.display = "block";
+            return false;
+        }
+        if(document.MyForm.hinhthuc.value=="bán lẻ" ||document.MyForm.hinhthuc.value=="Bán lẻ"){
+            var x=parseInt(solg);
+            var y=parseInt(dongia);
+            var tong=x*y;
+            document.getElementById("tongtien").value=tong;
+        }
+        if(document.MyForm.dongia.value > 150000){
+            alert("Sản phẩm chất lượng cao")
+        }
+        else{
+            alert("Them thanh cong!");
+        }
+        return(false);
+    }
+</script>
+</body>
+</html>

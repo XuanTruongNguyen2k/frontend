@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: rgb(201, 155, 202);
+}
+i{
+    margin-left: 5px;
+}
+.header{
+    width: 100%;
+    height: 140px;
+    background: rgb(211, 102, 102);
+    display: flex;
+    align-items: center;
+}
+.logo{
+    margin:0 50px;
+    width: 100px;
+    height: 100px;
+    background: url("icon-section_1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+.header .text{
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff;
+}
+/* menu header */
+.menu{
+    width: 100%;
+    height: 60px;
+    background: beige;
+}
+.menu ul{
+    list-style: none;
+    width: 100%;
+}
+.menu ul li{
+    color: #c7d7fb;
+    padding: 0 40px;
+    display: inline-block;
+    position: relative;
+}
+.menu ul li:hover{
+    background: burlywood;
+    transition: .5s;
+}
+.menu ul li a{
+    font-size: 14px;
+    font-weight: bold;
+    height: 60px;
+    line-height: 60px;
+    text-decoration: none;
+}
+/* menu cap 2 */
+.menu-cap2{
+    position: absolute;
+    width: 240px;
+    background: beige;
+    display: none;
+    left: 0;
+    z-index: 1;
+}
+.menu-cap2 li{
+    border-bottom: 1px solid silver;
+}
+.menu-cap2 a{
+    white-space: nowrap;
+    overflow: hidden;
+}
+.menu ul li:hover .menu-cap2{
+    display: block;
+}
+.boder{
+    width: 100%;
+    height: 36px;
+    background-color: rgb(211, 102, 102);
+    border-bottom: 1px solid #fff;
+}
+/* phan content */
+.content{
+    width: 100%;
+    height:600px;
+    background: rgb(177, 68, 68);
+    position: relative;
+    z-index: 0;
+    border-bottom: 1px solid #fff;
+}
+/* menu left */
+
+.menu-left{
+    width: 240px;
+    height: 100%;
+    background: rgb(187, 123, 26);
+}
+
+.menu-left ul{
+    list-style-type: none;
+    width: 100%;
+    background-color: rgb(177, 68, 68);
+}
+.menu-left ul li{
+    position: relative;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #fff;
+}
+.menu-left ul li:hover{
+    background: burlywood;
+    transition: .5s;
+}
+.menu-left ul li a{
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+.list-product{
+    position: absolute;
+    width: calc(100% - 240px);
+    height: 100%;
+    top: 0;
+    left: 240px;
+}
+.img-top{
+    width: 100%;
+    height: 150px;
+    background: url("banner-finnal.png");
+}
+.list-product .product{
+    width: 100%;
+    height: 36px;
+    background: rgb(187, 123, 26);
+}
+.list{
+    width: 100%;
+    height: 413px;
+    background: #fff;
+}
+.row{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.item{
+    margin-top: 10px;
+    width: 220px;
+    height: 150px;
+    border: 1px dotted #c7d7fb;
+    box-shadow: 0 4px 8px 0  rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+.picter{
+    width: 220px;
+    height: 100px;
+    background-image: url("img.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 10px;
+}
+.item:hover{
+    box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
+}
+.picter-text{
+    width: 100%;
+    background-color: silver;
+    margin-bottom: 5px;
+}
+.bottom{
+    height: 100px;
+    width: 100%;
+    background-color: darkgoldenrod;
+}
